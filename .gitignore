@@ -1,0 +1,6 @@
+/public/config.json
+/build
+/.env
+/config.json
+
+node_modules
