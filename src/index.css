@@ -1,5 +1,155 @@
-/* Can't style the html tag with theme-ui, so put styles in here */
+@tailwind base;
+@tailwind components;
+.setRow {
+  @apply pl-7 pr-7 h-16 lg:h-20 flex items-center text-base
+}
+.setRowHeader {
+  @apply grid text-black grid-cols-6 gap-1 w-full
+}
+@tailwind utilities;
 
-html {
-  height: 100%;
+
+
+
+  
+
+
+
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+
+.setBorderLeft{
+    border-left: 3px solid #fff;
+}
+
+.setBorderLeft:hover{
+    border-left: 3px solid #01D2D4;
+}
+
+.border-b-1{
+  border-bottom: 1px solid #ECF0F1;
+}
+
+.border-t-2{
+  border-top: 1px solid rgb(241, 232, 232);
+}
+
+.border-l-4{
+  border-left: 8px solid #fff;
+}
+
+.border-l-4-black{
+  border-right: 8px solid #000;
+}
+
+.border-r-4{
+  border-right: 8px solid #fff;
+}
+
+.border-r-4-black{
+  border-right: 8px solid #000;
+}
+
+.trans{
+  transition: 0.3s ease-in-out;
+}
+
+
+
+.changeTxtHover{
+  display: inline;
+}
+.changeTxtHover:hover{
+  display: none;
+}
+
+.zIndex-999{
+  z-index: 999999;
+}
+
+
+/* loading placeholder start */
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+.loading {
+  width: 30px;
+  height: 15px;
+  /* margin: 15px; */
+  border-radius: 4px;
+  background-image: linear-gradient(
+    90deg,
+    #e4e4e4 0%,
+    #f1f1f1 40%,
+    #ededed 60%,
+    #e4e4e4 100%
+  );
+  background-position: 0px 0px;
+  background-repeat: repeat;
+  animation: animatedBackground 5s linear infinite;
+}
+
+.circle {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+}
+
+.rainbow {
+  width: 120px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 4px;
+  background-image: linear-gradient(
+    90deg,
+    red 0%,
+    orange 7%,
+    yellow 21%,
+    green 35%,
+    blue 49%,
+    indigo 63%,
+    violet 77%, 
+    red 91%
+  );
+  background-position: 0px 0px;
+  background-repeat: repeat;
+  animation: animatedBackground 5s linear infinite;
+}
+
+.container {
+  display: flex;
+}
+/* loading placeholder finished */
+
+
+
+/* dashboard top circle hover set start*/
+.cngTxtHover .txtShowLast { display: none;}
+.cngTxtHover:hover .txtShowFirst { display: none;}
+.cngTxtHover:hover .txtShowLast { display: flex;}
+/* dashboard top circle hover finished */
+
+
+@media (min-width: 1350px) {
+  .setHightForVoteLeftBox{
+    max-height: 360px;
+  }
+}
+@media (max-width: 1350px) {
+  .setHightForVoteLeftBox{
+    max-height: 360px;
+  }
+}
+@media (max-width: 1200px) {
+  .setHightForVoteLeftBox{
+    max-height: 420px;
+  }
 }
