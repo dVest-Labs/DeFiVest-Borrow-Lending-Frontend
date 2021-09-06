@@ -6,14 +6,10 @@ interface Props {
 }
 
 const VotePageRightSide = ({ loading }: Props) => {
-  const data = false;
   return (
     <>
       {!loading ? (
-        <div
-          style={{ maxHeight: data ? "" : "190px" }}
-          className="flex flex-col md:col-start-3 md:col-end-7 bg-white mb-10 rounded-lg shadow-2xl"
-        >
+        <div className="flex flex-col md:col-start-3 md:col-end-7 bg-white mb-10 rounded-lg shadow-2xl">
           <div className="pl-7 h-14 border-b-1 border-underlinecl text-lg flex font-semibold items-center">
             Active Proposals
           </div>

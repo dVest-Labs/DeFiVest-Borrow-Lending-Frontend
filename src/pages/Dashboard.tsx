@@ -112,12 +112,12 @@ const Dashboard = () => {
             className="flex justify-center mb-6"
             style={{ marginTop: "-60px" }}
           >
-            <div className="w-11/12 grid grid-flow-col grid-col-1 grid-rows-2 lg:grid-col-2 lg:grid-rows-1 gap-6">
-              <div className="bg-white mx-2 h-auto rounded-lg shadow-2xl">
+            <div className="w-11/12 flex flex-col md:flex-row">
+              <div className="bg-white mx-0 md:mx-2 w-full md:w-1/2 h-auto rounded-lg shadow-2xl">
                 <DashboardBoxLeftSide loading={loading} />
               </div>
 
-              <div className="bg-white mx-2 h-auto rounded-lg shadow-2xl">
+              <div className="mt-5 md:mt-0 bg-white mx-0 md:mx-2 w-full md:w-1/2 h-auto rounded-lg shadow-2xl">
                 <DashboardBoxRightSide loading={loading} />
               </div>
             </div>
