@@ -1,0 +1,10 @@
+.connectWalletBtn {
+  background: #f12711;
+  background: -webkit-linear-gradient(to right, #f12711, #f5af19);
+  background: linear-gradient(to right, #f12711, #f5af19);
+}
+.connectWalletBtn:hover {
+  background: #f5af19;
+  background: -webkit-linear-gradient(to right, #f5af19, #f12711);
+  background: linear-gradient(to right, #f5af19, #f12711);
+}

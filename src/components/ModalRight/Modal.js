@@ -34,6 +34,7 @@ const Modal = ({ showmodal, setShowModal }) => {
           className="Background overflow-y-scroll"
           ref={modalRef}
           onClick={closeModal}
+          style={{ zIndex: 9999999 }}
         >
           <div className="ModalWrapper">
             <div className="px-6" style={{ flex: 5, alignSelf: "center" }}>
@@ -70,7 +71,7 @@ const Modal = ({ showmodal, setShowModal }) => {
                       className="outline-none text-4xl w-full text-center"
                     />
                     <div
-                      className="pl-5 text-center font-bold"
+                      className="pl-5 text-center text-xs"
                       style={{ color: "#AAB8C1" }}
                     >
                       80% LIMIT
@@ -195,8 +196,8 @@ const Modal = ({ showmodal, setShowModal }) => {
                     </div>
 
                     <button
-                      className="buttonModalContent  mt-3"
-                      style={{ background: " #aab8c1" }}
+                      className="buttonModalContent bg-primary mt-3"
+                      // style={{ background: " #aab8c1" }}
                     >
                       NO BALANCE TO WITHDRAW
                     </button>

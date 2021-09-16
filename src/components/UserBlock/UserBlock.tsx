@@ -1,6 +1,6 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-
+import "./UserBlock.css";
 import Button from "../Button/Button";
 import { useWalletModal } from "../WalletModal";
 import { Login } from "../WalletModal/types";
@@ -36,7 +36,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
     //   {accountEllipsis}
     // </ConnectButton>
     <div
-      className="text-base cursor-pointer bg-black border-2 border-primary hover:bg-primary trans rounded-md pt-1 pb-1 pr-3 pl-3 font-bold"
+      className="connectWalletBtn text-base cursor-pointer border-2 border-red-600 trans rounded-md pt-1 pb-1 pr-3 pl-3 font-bold"
       onClick={() => {
         onPresentAccountModal();
       }}
@@ -53,7 +53,7 @@ const UserBlock: React.FC<Props> = ({ account, login, logout }) => {
     //   Connect Wallet
     // </ConnectButton>
     <div
-      className="text-base cursor-pointer bg-black border-2 border-primary hover:bg-primary trans rounded-md pt-1 pb-1 pr-3 pl-3 font-bold"
+      className="connectWalletBtn text-base cursor-pointer border-2 border-red-600 hover:border-red-500 trans rounded-md pt-1 pb-1 pr-3 pl-3 font-medium"
       onClick={() => {
         onPresentConnectModal();
       }}

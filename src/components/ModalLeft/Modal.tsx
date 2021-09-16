@@ -38,6 +38,7 @@ const Modal = ({ showmodal, setShowModal }: Props) => {
           className="Background overflow-y-scroll"
           ref={modalRef}
           onClick={closeModal}
+          style={{ zIndex: 9999999 }}
         >
           <div className="ModalWrapper">
             <div className="px-6" style={{ flex: 5, alignSelf: "center" }}>
@@ -140,16 +141,9 @@ const Modal = ({ showmodal, setShowModal }: Props) => {
                       </div>
                       <div className="text-sm">0%</div>
                     </div>
-
-                    {/*<button*/}
-                    {/*  className="buttonModalContent  mt-1"*/}
-                    {/*  style={{ background: " #aab8c1" }}*/}
-                    {/*>*/}
-                    {/*  NO BALANCE TO WITHDRAW*/}
-                    {/*</button>*/}
                     <button
-                      className="buttonModalContent  mt-3"
-                      style={{ background: " #aab8c1" }}
+                      className="buttonModalContent bg-primary mt-3"
+                      // style={{ background: " #aab8c1" }}
                     >
                       NO BALANCE TO WITHDRAW
                     </button>
@@ -160,14 +154,7 @@ const Modal = ({ showmodal, setShowModal }: Props) => {
                       </div>
                       <div className="text-sm">0 BAT</div>
                     </div>
-
-                    {/*<div className="flex w-full items-center justify-between">*/}
-                    {/*  <div className="flex flex-row items-center mt-1">*/}
-                    {/*    <span className="text-sm">Currently Supplying</span>*/}
-                    {/*  </div>*/}
-                    {/*  <div className="text-sm">0 BAT</div>*/}
-                    {/*</div>*/}
-                    <div className="mb-3 cursor-pointer text-sm pt-2 font-bold hover:text-primary">
+                    <div className="mb-3 cursor-pointer text-sm pt-2 font-medium hover:text-primary">
                       FAUCET
                     </div>
                   </>

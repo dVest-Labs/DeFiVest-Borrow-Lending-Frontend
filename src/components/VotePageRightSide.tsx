@@ -9,8 +9,8 @@ const VotePageRightSide = ({ loading }: Props) => {
   return (
     <>
       {!loading ? (
-        <div className="flex flex-col md:col-start-3 md:col-end-7 bg-white mb-10 rounded-lg shadow-2xl">
-          <div className="pl-7 h-14 border-b-1 border-underlinecl text-lg flex font-semibold items-center">
+        <div className="box-shadow-inner flex flex-col md:col-start-3 md:col-end-7 mb-10 rounded-lg shadow-2xl">
+          <div className="text-white pl-7 h-14 border-b-1 border-underlinecl text-lg flex items-center">
             Active Proposals
           </div>
           <div className="pl-7 pr-7 h-20 border-b-1 text-lg flex flex-col justify-center">

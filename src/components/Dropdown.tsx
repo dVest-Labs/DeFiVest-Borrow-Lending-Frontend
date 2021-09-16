@@ -10,7 +10,7 @@ const Dropdown = ({ toggle, isOpen }) => {
   const { login, logout } = useAuth();
   return (
     <div
-      style={{ marginTop: "-64px" }}
+      style={{ zIndex: 99999 }}
       className={
         isOpen ? "text-white fixed h-screen w-screen bg-black z-50" : "hidden"
       }
@@ -35,7 +35,7 @@ const Dropdown = ({ toggle, isOpen }) => {
       <div className="text-3xl font-bold flex flex-col items-center justify-center pt-12 cursor-pointer">
         <img src={logo} style={{ height: "25px", width: "40px" }} alt="Logo" />
         <Link to="/" onClick={toggle}>
-          <div className="pt-2">DeFiVest</div>
+          <div className="pt-2">DEFIVEST</div>
         </Link>
       </div>
       <div onClick={toggle} className="flex justify-center pt-20 font-semibold">

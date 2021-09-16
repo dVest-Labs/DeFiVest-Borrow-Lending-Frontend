@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Navbar from "./components/Navbar";
-import Dashboard from "./pages/Dashboard";
-import Vote from "./pages/Vote";
+import Navbar from "./components/navbar/Navbar";
+import Dashboard from "./pages/dashboard/Dashboard";
+import Vote from "./pages/vote/Vote";
 import Dropdown from "./components/Dropdown";
 import useEagerConnect from "hooks/useEagerConnect";
 import ToastListener from "components/ToastListener";
@@ -16,7 +16,7 @@ function App() {
   };
   useEagerConnect();
   return (
-    <div className="">
+    <div>
       <Router>
         <Navbar toggle={toggle} isOpen={isOpen} />
         <Dropdown toggle={toggle} isOpen={isOpen} />

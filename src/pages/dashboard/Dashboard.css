@@ -1,0 +1,45 @@
+.DashboardContainer {
+  /* background: #c31432;
+  background: -webkit-linear-gradient(to right, #240b36, #c31432);
+  background: linear-gradient(to right, #240b36, #c31432); */
+  /* background: #f12711;
+  background: -webkit-linear-gradient(to right, #f12711, #f5af19);
+  background: linear-gradient(to right, #f12711, #f5af19); */
+  background: #0f2027;
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+}
+
+.progress {
+  /* background: rgba(255, 255, 255, 0.1); */
+  background: gray;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  /* padding: 0 5px; */
+  display: flex;
+  height: 10px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  /* box-shadow: 0 0 10px 0 #fff; */
+  border-radius: 100px;
+  /* background: #fff; */
+  background: #f12711;
+  background: -webkit-linear-gradient(to right, #f12711, #f5af19);
+  background: linear-gradient(to right, #f12711, #f5af19);
+  height: 10px;
+  width: 0;
+}
+
+@keyframes load {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 68%;
+  }
+}
