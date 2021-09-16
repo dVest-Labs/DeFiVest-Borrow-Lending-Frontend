@@ -6,7 +6,8 @@ import useAuth from "hooks/useAuth";
 import UserBlock from "components/UserBlock/UserBlock";
 import logo from "../../images/logo.png";
 import "./Navbar.css";
-import Dashboard from "../../pages/dashboard/Dashboard";
+import { Squash as Hamburger } from "hamburger-react";
+// import Dashboard from "../../pages/dashboard/Dashboard";
 
 const Navbar = ({ toggle, isOpen }) => {
   const { pathname } = useLocation();
@@ -60,37 +61,13 @@ const Navbar = ({ toggle, isOpen }) => {
             <UserBlock account={account} login={login} logout={logout} />
           </div>
           {isOpen ? (
-            <svg
-              onClick={toggle}
-              className="cursor-pointer w-6 h-6 flex items-end md:hidden mr-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M6 18L18 6M6 6l12 12"
-              ></path>
-            </svg>
+            <div className="cursor-pointer  flex items-end md:hidden mr-8">
+              <Hamburger toggle={toggle} toggled={isOpen} />
+            </div>
           ) : (
-            <svg
-              onClick={toggle}
-              className="cursor-pointer w-6 h-6 flex items-end md:hidden mr-8"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M4 6h16M4 12h16M4 18h16"
-              />
-            </svg>
+            <div className="cursor-pointer  flex items-end md:hidden mr-8">
+              <Hamburger toggle={toggle} toggled={isOpen} />
+            </div>
           )}
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Squash as Hamburger } from "hamburger-react";
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
 import { useWeb3React } from "@web3-react/core";
@@ -11,29 +12,18 @@ const Dropdown = ({ toggle, isOpen }) => {
   return (
     <div
       style={{ zIndex: 99999 }}
-      className={
-        isOpen ? "text-white fixed h-screen w-screen bg-black z-50" : "hidden"
-      }
+      className={!isOpen ? "dropDown2 text-white" : "dropDown text-white"}
     >
-      <div onClick={toggle} className="flex justify-end pt-5 mr-4">
-        <svg
-          onClick={toggle}
-          className="cursor-pointer w-6 h-6 flex items-end md:hidden mr-8"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
-        </svg>
+      <div className="flex justify-end pt-5 mr-8">
+        <Hamburger toggle={toggle} toggled={isOpen} />
       </div>
       <div className="text-3xl font-bold flex flex-col items-center justify-center pt-12 cursor-pointer">
-        <img src={logo} style={{ height: "25px", width: "40px" }} alt="Logo" />
+        <img
+          src={logo}
+          style={{ height: "40px", width: "40px" }}
+          alt="Logo"
+          className="rounded-xl border-2 border-black"
+        />
         <Link to="/" onClick={toggle}>
           <div className="pt-2">DEFIVEST</div>
         </Link>

@@ -109,19 +109,21 @@ const DashboardBoxRightSide = ({ loading }) => {
 
       {BoxRightSideData.map((item, index) => (
         <div
-          onClick={() => {
-            setShowModal(!showmodal);
-            window.sessionStorage.setItem("tokenName", item.name);
-            window.sessionStorage.setItem("logoLink", item.img);
-            window.sessionStorage.setItem("apyValue", item.apy);
-            window.sessionStorage.setItem("wallet", item.wallet);
-            window.sessionStorage.setItem("liquidity", item.liquidity);
-          }}
           key={index}
-          className="box-shadow-inner text-xs sm:text-sm setRow shadow-lg setBorderLef cursor-pointer"
+          className="box-shadow-inner text-xs sm:text-sm setRow shadow-lg setBorderLef"
         >
           {!loading && (
-            <div className="setRowHeader text-white">
+            <div
+              onClick={() => {
+                setShowModal(!showmodal);
+                window.sessionStorage.setItem("tokenName", item.name);
+                window.sessionStorage.setItem("logoLink", item.img);
+                window.sessionStorage.setItem("apyValue", item.apy);
+                window.sessionStorage.setItem("wallet", item.wallet);
+                window.sessionStorage.setItem("liquidity", item.liquidity);
+              }}
+              className="setRowHeader text-white cursor-pointer"
+            >
               <div className="flex items-center col-start-1 col-end-4">
                 <img className="h-8 w-8 mr-3" src={item.img} alt="" />
                 <span>{item.name}</span>

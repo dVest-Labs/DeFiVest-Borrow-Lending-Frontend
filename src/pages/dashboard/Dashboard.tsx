@@ -74,7 +74,7 @@ const Dashboard = () => {
             </div>
           </section>
 
-          <div className="flex justify-center mb-6">
+          <div className="flex justify-center mb-12">
             <div className="w-11/12 flex flex-col md:flex-row">
               <div className="bg-whit mx-0 md:mx-2 w-full md:w-1/2 h-auto rounded-lg shadow-2xl">
                 <DashboardBoxLeftSide loading={loading} />
