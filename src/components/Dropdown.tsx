@@ -12,7 +12,9 @@ const Dropdown = ({ toggle, isOpen }) => {
   return (
     <div
       style={{ zIndex: 99999 }}
-      className={!isOpen ? "dropDown2 text-white" : "dropDown text-white"}
+      // className={!isOpen ? "dropDown2 text-white" : "dropDown text-white"}
+      // className={isOpen ? "h-screen bg-red-500" : "hidden"}
+      className={isOpen ? "dropDown" : "dropDown2"}
     >
       <div className="flex justify-end pt-5 mr-8">
         <Hamburger toggle={toggle} toggled={isOpen} />

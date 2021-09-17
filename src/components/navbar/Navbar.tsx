@@ -17,10 +17,10 @@ const Navbar = ({ toggle, isOpen }) => {
     <>
       <div
         style={{ zIndex: 9999 }}
-        className="fixed w-full navbarContainer grid text-white grid-cols-12 gap-1 h-20 shadow-lg box-shadow-inner"
+        className="fixed w-full navbarContainer flex text-white h-20 shadow-lg box-shadow-inner"
       >
-        <div className="col-start-1 col-end-5 md:col-start-1 md:col-end-4  flex justify-center items-center">
-          <div className="ml-8 text-2xl font-bold flex items-center cursor-pointer">
+        <div className="w-1/2 md:w-3/12 flex items-center">
+          <div className="text-2xl font-bold flex items-center cursor-pointer">
             <img
               src={logo}
               style={{ height: "30px", width: "30px" }}
@@ -33,7 +33,7 @@ const Navbar = ({ toggle, isOpen }) => {
           </div>
         </div>
 
-        <div className="col-start-5 col-end-5 md:col-start-4 md:col-end-10  flex justify-center items-center">
+        <div className="w-0 md:w-6/12 flex justify-center items-center">
           <div className="pt-2 flex invisible md:visible ">
             <div
               className={
@@ -56,16 +56,16 @@ const Navbar = ({ toggle, isOpen }) => {
           </div>
         </div>
 
-        <div className="col-start-6 col-end-13 md:col-start-10 md:col-end-13 flex justify-end md:justify-center items-center">
+        <div className="w-1/2 md:w-3/12 flex justify-end items-center">
           <div className="hidden md:flex">
             <UserBlock account={account} login={login} logout={logout} />
           </div>
           {isOpen ? (
-            <div className="cursor-pointer  flex items-end md:hidden mr-8">
+            <div className="cursor-pointer flex items-end md:hidden text-white">
               <Hamburger toggle={toggle} toggled={isOpen} />
             </div>
           ) : (
-            <div className="cursor-pointer  flex items-end md:hidden mr-8">
+            <div className=" cursor-pointer flex items-end md:hidden text-white">
               <Hamburger toggle={toggle} toggled={isOpen} />
             </div>
           )}
